@@ -627,6 +627,36 @@ video {
   }
 }
 
+.btn {
+  display: inline-block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #7f9cf5;
+  background-color: #667eea;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+  background-color: #7f9cf5;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  outline: 0;
+}
+
+.btn:active {
+  background-color: #5a67d8;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

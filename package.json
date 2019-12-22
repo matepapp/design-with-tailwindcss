@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "postcss css/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
