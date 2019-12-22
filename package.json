@@ -1,0 +1,26 @@
+{
+  "name": "design-with-tailwindcss",
+  "version": "1.0.0",
+  "description": "Official screencast of TailwindCSS utility-first CSS framework",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matepapp/design-with-tailwindcss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matepapp/design-with-tailwindcss/issues"
+  },
+  "homepage": "https://github.com/matepapp/design-with-tailwindcss#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.3",
+    "postcss-cli": "^6.1.3",
+    "tailwindcss": "^1.1.4"
+  }
+}
