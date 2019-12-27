@@ -9,7 +9,8 @@ export const PropertyCard = ({
   priceInCents,
   formattedPrice,
   reviewCount,
-  rating
+  rating,
+  isNew
 }) => {
   return (
     <div>
@@ -21,12 +22,18 @@ export const PropertyCard = ({
         />
       </div>
       <div className="relative px-4 -mt-16">
-        <div className="p-6 bg-white rounded-lg shadow-lg">
+        <div className="min-w-full p-6 bg-white rounded-lg shadow-lg">
           <div className="flex items-baseline">
-            <span className="inline-block px-2 text-xs font-semibold tracking-wide text-teal-800 uppercase bg-teal-200 rounded-full">
-              New
-            </span>
-            <div className="ml-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">{`${beds} beds • ${baths} baths`}</div>
+            {isNew && (
+              <span className="inline-block px-2 text-xs font-semibold tracking-wide text-teal-800 uppercase bg-teal-200 rounded-full">
+                New
+              </span>
+            )}
+            <div
+              className={`${
+                isNew ? "ml-2" : "ml-0"
+              } text-xs font-semibold tracking-wide text-gray-600 uppercase`}
+            >{`${beds} beds • ${baths} baths`}</div>
           </div>
           <h4 className="mt-1 text-lg font-semibold leading-tight truncate">
             {title}
