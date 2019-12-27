@@ -5,12 +5,12 @@ export const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900">
-      <div className="flex items-center justify-between px-4 py-3">
+    <header className="bg-gray-900 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
+      <div className="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
           <img src={logo} alt="Workaction" className="h-8" />
         </div>
-        <div>
+        <div className="sm:hidden">
           <button
             type="button"
             onClick={() => setOpen(prev => !prev)}
@@ -35,21 +35,25 @@ export const NavBar = () => {
         </div>
       </div>
 
-      <div className={`${isOpen ? "block" : "hidden"} px-2 pt-2 pb-4`}>
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } px-2 pt-2 pb-4 sm:flex sm:p-0`}
+      >
         <a
-          className="block px-2 py-1 font-semibold text-white rounded hover:bg-gray-800"
+          className="block px-2 py-1 font-semibold text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
           href="#"
         >
           List your property
         </a>
         <a
-          className="block px-2 py-1 mt-1 font-semibold text-white rounded hover:bg-gray-800"
+          className="block px-2 py-1 mt-1 font-semibold text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
           href="#"
         >
           Trips
         </a>
         <a
-          className="block px-2 py-1 mt-1 font-semibold text-white rounded hover:bg-gray-800"
+          className="block px-2 py-1 mt-1 font-semibold text-white rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
           href="#"
         >
           Messages
