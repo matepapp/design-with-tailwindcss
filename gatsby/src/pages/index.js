@@ -1,4 +1,5 @@
 import React from "react";
+import { Dropdown } from "../components/Dropdown";
 import { NavBar } from "../components/NavBar";
 import { PropertyCard } from "../components/PropertyCard";
 import "../css/style.css";
@@ -8,6 +9,7 @@ function IndexPage() {
     <div>
       <NavBar></NavBar>
       <div className="items-center justify-center min-h-screen p-8 antialiased text-gray-900 bg-gray-200">
+        <Dropdown />
         <PropertyCard
           imageUrl="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
           imageAlt="Rear view of modern home with pool"
