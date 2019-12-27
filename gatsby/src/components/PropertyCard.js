@@ -13,10 +13,21 @@ export const PropertyCard = ({
 }) => {
   return (
     <div className="overflow-hidden bg-white border rounded-lg">
-      <img src={imageUrl} alt={imageAlt} />
+      <div className="relative bg-red-500 pb-2/3">
+        <img
+          src={imageUrl}
+          alt={imageAlt}
+          className="absolute top-0 object-cover w-full h-full"
+        />
+      </div>
       <div className="p-6">
-        <div className="text-xs font-semibold tracking-wide text-gray-600 uppercase">{`${beds} beds • ${baths} baths`}</div>
-        <h4 className="text-lg font-semibold leading-tight truncate">
+        <div className="flex items-baseline">
+          <span className="inline-block px-2 text-xs font-semibold tracking-wide text-teal-800 uppercase bg-teal-200 rounded-full">
+            New
+          </span>
+          <div className="ml-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">{`${beds} beds • ${baths} baths`}</div>
+        </div>
+        <h4 className="mt-1 text-lg font-semibold leading-tight truncate">
           {title}
         </h4>
         <div className="mt-1">
