@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../images/logo-inverted.svg";
+import { Dropdown } from "./Dropdown";
 
 export const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -19,14 +20,14 @@ export const NavBar = () => {
             <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
               {isOpen && (
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
                 />
               )}
 
               {!isOpen && (
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
                 />
               )}
@@ -35,7 +36,7 @@ export const NavBar = () => {
         </div>
       </div>
 
-      <div
+      <nav
         className={`${
           isOpen ? "block" : "hidden"
         } px-2 pt-2 pb-4 sm:flex sm:p-0`}
@@ -58,7 +59,10 @@ export const NavBar = () => {
         >
           Messages
         </a>
-      </div>
+        <div className="ml-6">
+          <Dropdown />
+        </div>
+      </nav>
     </header>
   );
 };
